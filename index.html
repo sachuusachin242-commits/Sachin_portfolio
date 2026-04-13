@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sachin Portfolio</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
+
+body{background:#0f0f1a;color:white}
+
+/* Navbar */
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:15px 20px;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav a{
+color:white;
+margin-left:15px;
+text-decoration:none;
+}
+
+/* Hero */
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.btn{
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:white;
+color:#764ba2;
+cursor:pointer;
+margin-top:10px;
+}
+
+/* Sections */
+section{padding:80px 20px;text-align:center}
+
+/* Skills */
+.bar{
+background:#333;
+border-radius:20px;
+margin:10px auto;
+width:80%;
+}
+.fill{
+background:#667eea;
+padding:5px;
+border-radius:20px;
+}
+
+/* Projects */
+.projects{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+justify-content:center;
+}
+.card{
+background:#1a1a2e;
+padding:20px;
+border-radius:10px;
+width:150px;
+}
+
+/* WhatsApp */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px;
+border-radius:50%;
+color:white;
+font-size:20px;
+text-decoration:none;
+}
+
+/* Footer */
+footer{background:black;padding:15px}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h3>Sachin</h3>
+<div>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<div class="hero">
+<div>
+<h1>Hi, I'm Sachin 🔥</h1>
+<p>I create powerful websites</p>
+<button class="btn" onclick="go('about')">Explore</button>
+</div>
+</div>
+
+<section id="about">
+<h2>About Me</h2>
+<p>मैं एक web developer हूँ और modern website बनाता हूँ 💻🔥</p>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+
+<p>HTML</p>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+
+<p>CSS</p>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+
+<p>JavaScript</p>
+<div class="bar"><div class="fill" style="width:70%"></div></div>
+
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+
+<div class="projects">
+<div class="card">Portfolio</div>
+<div class="card">Business Site</div>
+<div class="card">Landing Page</div>
+</div>
+
+</section>
+
+<section id="contact">
+<h2>Contact Me</h2>
+<p>Email: your@email.com</p>
+<button class="btn">Hire Me</button>
+</section>
+
+<footer>
+<p>© 2026 Sachin</p>
+</footer>
+
+<!-- WhatsApp Button -->
+<a class="whatsapp" href="intent://send?phone=917991901145&text=Hello%20Sachin%20I%20want%20a%20website#Intent;scheme=whatsapp;package=com.whatsapp;end">💬</a>
+
+<script>
+function go(id){
+document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
