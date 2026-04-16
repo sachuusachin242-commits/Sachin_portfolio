@@ -70,14 +70,16 @@ h1,h2{
 text-shadow:0 0 10px #00f7ff;
 }
 
-/* Hero (image background) */
+/* Hero (with overlay FIXED) */
 .hero{
 height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-background:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') no-repeat center/cover;
+background:
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') no-repeat center/cover;
 }
 
 .hero h1{
@@ -98,6 +100,7 @@ color:#764ba2;
 cursor:pointer;
 margin-top:15px;
 transition:0.3s;
+box-shadow:0 0 15px #00f7ff;
 }
 
 .btn:hover{
