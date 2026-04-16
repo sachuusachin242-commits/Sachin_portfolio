@@ -17,6 +17,24 @@ scroll-behavior:smooth;
 body{
 background:#0f0f1a;
 color:white;
+overflow-x:hidden;
+}
+
+/* Background Animation */
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:radial-gradient(circle,#667eea 1px,transparent 1px);
+background-size:40px 40px;
+animation:move 20s linear infinite;
+z-index:-1;
+}
+
+@keyframes move{
+0%{transform:translate(0,0)}
+100%{transform:translate(-200px,-200px)}
 }
 
 /* Navbar */
@@ -32,7 +50,9 @@ backdrop-filter:blur(10px);
 z-index:1000;
 }
 
-nav h3{color:#00f7ff;}
+nav h3{
+color:#00f7ff;
+}
 
 nav a{
 color:white;
@@ -40,7 +60,10 @@ margin-left:15px;
 text-decoration:none;
 transition:0.3s;
 }
-nav a:hover{color:#00f7ff}
+
+nav a:hover{
+color:#00f7ff;
+}
 
 /* Hero */
 .hero{
@@ -54,7 +77,10 @@ background:linear-gradient(135deg,#667eea,#764ba2);
 
 .hero h1{
 font-size:40px;
-margin-bottom:10px;
+}
+
+.typing{
+color:#00f7ff;
 }
 
 .btn{
@@ -67,9 +93,9 @@ cursor:pointer;
 margin-top:15px;
 transition:0.3s;
 }
+
 .btn:hover{
-background:#00f7ff;
-color:black;
+transform:scale(1.1);
 }
 
 /* Sections */
@@ -84,11 +110,14 @@ background:#333;
 border-radius:20px;
 margin:10px auto;
 width:80%;
+overflow:hidden;
 }
+
 .fill{
 background:#00f7ff;
-padding:5px;
-border-radius:20px;
+height:10px;
+width:0;
+transition:1.5s;
 }
 
 /* Projects */
@@ -98,26 +127,20 @@ flex-wrap:wrap;
 gap:15px;
 justify-content:center;
 }
+
 .card{
 background:#1a1a2e;
 padding:20px;
 border-radius:10px;
 width:180px;
 transition:0.3s;
-}
-.card:hover{
-transform:scale(1.1);
-background:#00f7ff;
-color:black;
+cursor:pointer;
 }
 
-/* Contact */
-#contact input, #contact textarea{
-width:80%;
-padding:10px;
-margin:5px;
-border:none;
-border-radius:5px;
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+background:#00f7ff;
+color:black;
 }
 
 /* WhatsApp */
@@ -139,6 +162,12 @@ background:black;
 padding:15px;
 }
 
+/* Responsive */
+@media(max-width:600px){
+.hero h1{
+font-size:28px;
+}
+}
 </style>
 </head>
 
@@ -147,7 +176,7 @@ padding:15px;
 <nav>
 <h3>Sachin</h3>
 <div>
-<a href="#">Home</a>
+<a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
@@ -155,22 +184,23 @@ padding:15px;
 </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
+<!-- Hero -->
+<div class="hero" id="home">
 <div>
 <h1>Hi, I'm Sachin 🔥</h1>
-<p>I create powerful websites 🚀</p>
+<p class="typing"></p>
 <button class="btn" onclick="go('about')">Explore</button>
 </div>
 </div>
 
-<!-- ABOUT -->
+<!-- About -->
 <section id="about">
 <h2>About Me</h2>
-<p>मैं एक web developer हूँ और modern website बनाता हूँ 💻🔥</p>
+<p>मैं एक modern web developer हूँ 💻🔥<br>
+मैं fast, responsive और premium websites बनाता हूँ</p>
 </section>
 
-<!-- SKILLS -->
+<!-- Skills -->
 <section id="skills">
 <h2>Skills</h2>
 
@@ -185,7 +215,7 @@ padding:15px;
 
 </section>
 
-<!-- PROJECTS -->
+<!-- Projects -->
 <section id="projects">
 <h2>Projects</h2>
 
@@ -197,33 +227,45 @@ padding:15px;
 
 </section>
 
-<!-- CONTACT -->
+<!-- Contact -->
 <section id="contact">
 <h2>Contact Me</h2>
-
-<input type="text" placeholder="Your Name"><br>
-<input type="email" placeholder="Your Email"><br>
-<textarea placeholder="Message"></textarea><br>
-
-<button class="btn" onclick="sendMsg()">Send Message</button>
+<p>Email: your@email.com</p>
+<button class="btn">Hire Me</button>
 </section>
 
-<!-- FOOTER -->
 <footer>
-<p>© 2026 Sachin | Made with ❤️</p>
+<p>© 2026 Sachin</p>
 </footer>
 
-<!-- WhatsApp -->
 <a class="whatsapp" href="https://wa.me/917991901145?text=Hello%20Sachin%20I%20want%20a%20website">💬</a>
 
 <script>
+
+/* Smooth scroll */
 function go(id){
 document.getElementById(id).scrollIntoView({behavior:'smooth'});
 }
 
-function sendMsg(){
-alert("Message feature coming soon 😎");
+/* Typing Animation */
+let text="I create powerful websites 🚀";
+let i=0;
+function typing(){
+if(i<text.length){
+document.querySelector(".typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(typing,50);
 }
+}
+typing();
+
+/* Skills Animation */
+window.addEventListener("scroll",()=>{
+document.querySelectorAll(".fill").forEach(bar=>{
+bar.style.width=bar.getAttribute("style").replace("width:","");
+});
+});
+
 </script>
 
 </body>
