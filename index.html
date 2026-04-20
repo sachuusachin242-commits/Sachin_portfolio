@@ -3,39 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sachin Portfolio</title>
+<title>Sachin Web Services</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
 
-body{
-background:#0f0f1a;
-color:white;
-overflow-x:hidden;
-}
-
-/* Background dots */
-body::before{
-content:"";
-position:fixed;
-width:200%;
-height:200%;
-background:radial-gradient(circle,#00f7ff 1px,transparent 1px);
-background-size:40px 40px;
-animation:move 20s linear infinite;
-z-index:-1;
-}
-
-@keyframes move{
-0%{transform:translate(0,0)}
-100%{transform:translate(-200px,-200px)}
-}
+body{background:#0f0f1a;color:white}
 
 /* Navbar */
 nav{
@@ -50,47 +23,22 @@ backdrop-filter:blur(10px);
 z-index:1000;
 }
 
-nav h3{
-color:#00f7ff;
-}
-
 nav a{
 color:white;
 margin-left:15px;
 text-decoration:none;
-transition:0.3s;
 }
 
-nav a:hover{
-color:#00f7ff;
-}
-
-/* Glow */
-h1,h2{
-text-shadow:0 0 10px #00f7ff;
-}
-
-/* Hero (with overlay FIXED) */
+/* Hero */
 .hero{
 height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-background:
-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') no-repeat center/cover;
+background:linear-gradient(135deg,#667eea,#764ba2);
 }
 
-.hero h1{
-font-size:40px;
-}
-
-.typing{
-color:#00f7ff;
-}
-
-/* Button */
 .btn{
 padding:12px 25px;
 border:none;
@@ -98,58 +46,33 @@ border-radius:30px;
 background:white;
 color:#764ba2;
 cursor:pointer;
-margin-top:15px;
-transition:0.3s;
-box-shadow:0 0 15px #00f7ff;
+margin-top:10px;
 }
 
-.btn:hover{
-transform:scale(1.1);
-}
+/* Section */
+section{padding:80px 20px;text-align:center}
 
-/* Sections */
-section{
-padding:80px 20px;
-text-align:center;
-}
-
-/* Skills */
-.bar{
-background:#333;
-border-radius:20px;
-margin:10px auto;
-width:80%;
-overflow:hidden;
-}
-
-.fill{
-background:#00f7ff;
-height:10px;
-width:0;
-transition:1.5s;
-}
-
-/* Projects */
-.projects{
-display:flex;
-flex-wrap:wrap;
-gap:15px;
-justify-content:center;
-}
-
-.card{
+/* Pricing */
+.price-box{
 background:#1a1a2e;
 padding:20px;
 border-radius:10px;
-width:180px;
-transition:0.3s;
-cursor:pointer;
+margin:20px auto;
+width:80%;
 }
 
-.card:hover{
-transform:translateY(-10px) scale(1.05);
-background:#00f7ff;
-color:black;
+.price{
+font-size:25px;
+color:#00f7ff;
+}
+
+/* Form */
+input,textarea{
+width:80%;
+padding:10px;
+margin:10px;
+border:none;
+border-radius:5px;
 }
 
 /* WhatsApp */
@@ -165,18 +88,7 @@ font-size:20px;
 text-decoration:none;
 }
 
-/* Footer */
-footer{
-background:black;
-padding:15px;
-}
-
-/* Mobile */
-@media(max-width:600px){
-.hero h1{
-font-size:28px;
-}
-}
+footer{background:black;padding:15px}
 </style>
 </head>
 
@@ -185,109 +97,80 @@ font-size:28px;
 <nav>
 <h3>Sachin</h3>
 <div>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#buy">Buy</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
-<!-- Hero -->
-<div class="hero" id="home">
+<!-- HERO -->
+<div class="hero">
 <div>
-<h1>Hi, I'm Sachin 🔥</h1>
-<p class="typing"></p>
-<button class="btn" onclick="go('about')">Explore</button>
+<h1>I Build Websites 💻🔥</h1>
+<p>Get your business online fast</p>
+<button class="btn" onclick="go('buy')">Order Now</button>
 </div>
 </div>
 
-<!-- About -->
-<section id="about">
-<h2>About Me</h2>
-<p>मैं एक modern web developer हूँ 💻🔥<br>
-मैं fast, responsive और premium websites बनाता हूँ</p>
+<!-- SERVICES -->
+<section id="services">
+<h2>My Services</h2>
+<p>✔ Portfolio Website</p>
+<p>✔ Business Website</p>
+<p>✔ Landing Page</p>
+<p>✔ WhatsApp Integration</p>
 </section>
 
-<!-- Skills -->
-<section id="skills">
-<h2>Skills</h2>
+<!-- PRICE -->
+<section id="buy">
+<h2>Buy Website</h2>
 
-<p>HTML</p>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
-
-<p>CSS</p>
-<div class="bar"><div class="fill" style="width:80%"></div></div>
-
-<p>JavaScript</p>
-<div class="bar"><div class="fill" style="width:70%"></div></div>
-
-</section>
-
-<!-- Projects -->
-<section id="projects">
-<h2>Projects</h2>
-
-<div class="projects">
-<div class="card" onclick="window.open('https://google.com')">Portfolio</div>
-<div class="card" onclick="window.open('https://google.com')">Business Site</div>
-<div class="card" onclick="window.open('https://google.com')">Landing Page</div>
+<div class="price-box">
+<p>Professional Website</p>
+<p class="price">₹3500 - ₹6000</p>
+<p>Fast delivery + Premium Design</p>
 </div>
 
+<button class="btn" onclick="order()">Order on WhatsApp</button>
+
 </section>
 
-<!-- Contact -->
+<!-- CONTACT FORM -->
 <section id="contact">
 <h2>Contact Me</h2>
-<p>Email: your@email.com</p>
-<button class="btn" onclick="window.open('https://wa.me/917991901145')">Hire Me</button>
+
+<input type="text" id="name" placeholder="Your Name"><br>
+<input type="text" id="work" placeholder="Website Type"><br>
+<textarea id="msg" placeholder="Your Message"></textarea><br>
+
+<button class="btn" onclick="sendMsg()">Send</button>
+
 </section>
 
 <footer>
-<p>© 2026 Sachin</p>
+<p>© 2026 Sachin Web Services</p>
 </footer>
 
 <a class="whatsapp" href="https://wa.me/917991901145">💬</a>
 
 <script>
-
-/* Scroll */
 function go(id){
 document.getElementById(id).scrollIntoView({behavior:'smooth'});
 }
 
-/* Typing */
-let text="I create powerful websites 🚀";
-let i=0;
-function typing(){
-if(i<text.length){
-document.querySelector(".typing").innerHTML+=text.charAt(i);
-i++;
-setTimeout(typing,50);
+function order(){
+window.open("https://wa.me/917991901145?text=Hello%20I%20want%20a%20website%20(₹3500-6000)");
 }
+
+function sendMsg(){
+let name=document.getElementById("name").value;
+let work=document.getElementById("work").value;
+let msg=document.getElementById("msg").value;
+
+let text=`Hello, Name: ${name}, Work: ${work}, Message: ${msg}`;
+window.open(`https://wa.me/917991901145?text=${encodeURIComponent(text)}`);
 }
-typing();
-
-/* Skills animation */
-window.addEventListener("scroll",()=>{
-document.querySelectorAll(".fill").forEach(bar=>{
-bar.style.width=bar.getAttribute("style").replace("width:","");
-});
-});
-
-/* Navbar highlight */
-window.addEventListener("scroll", () => {
-document.querySelectorAll("section").forEach(sec => {
-let top = window.scrollY;
-if(top >= sec.offsetTop - 100){
-document.querySelectorAll("nav a").forEach(a=>a.style.color="white");
-let id = sec.getAttribute("id");
-let active = document.querySelector(`nav a[href*=${id}]`);
-if(active) active.style.color="#00f7ff";
-}
-});
-});
-
 </script>
 
 </body>
