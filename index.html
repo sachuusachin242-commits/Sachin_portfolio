@@ -6,37 +6,20 @@
 <title>Sachin Web Services</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
 
 body{
-background:#0f0f1a;
 color:white;
-overflow-x:hidden;
+background:#0a0a0a;
 }
 
-/* 🌌 Animated Gradient Background */
-body::before{
-content:"";
-position:fixed;
-width:200%;
-height:200%;
-background:radial-gradient(circle,#00f7ff33 1px,transparent 1px);
-background-size:50px 50px;
-animation:move 15s linear infinite;
-z-index:-1;
-}
-
-@keyframes move{
-0%{transform:translate(0,0)}
-100%{transform:translate(-200px,-200px)}
-}
-
-/* Glow Text */
-h1,h2,h3,p,a{
-text-shadow:0 0 10px #00f7ff,0 0 20px #00f7ff;
-}
-
-/* Navbar */
+/* NAVBAR */
 nav{
 position:fixed;
 top:0;
@@ -49,59 +32,91 @@ backdrop-filter:blur(10px);
 z-index:1000;
 }
 
+nav h2{
+color:#00f7ff;
+text-shadow:0 0 15px #00f7ff;
+}
+
 nav a{
 color:white;
 margin-left:15px;
 text-decoration:none;
+text-shadow:0 0 10px #00f7ff;
 }
 
-/* Hero */
+/* HERO (TOP UNIQUE BG) */
 .hero{
 height:100vh;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
-background:linear-gradient(135deg,#667eea,#764ba2);
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:40px;
+text-shadow:0 0 20px #00f7ff;
+}
+
+.hero p{
+margin-top:10px;
+text-shadow:0 0 10px #00f7ff;
 }
 
 .btn{
 padding:12px 25px;
 border:none;
 border-radius:30px;
-background:white;
-color:#764ba2;
+background:#00f7ff;
+color:black;
 cursor:pointer;
-margin-top:10px;
+margin-top:15px;
+font-weight:bold;
 }
 
-/* Sections */
-section{padding:80px 20px;text-align:center}
+/* SECTION */
+section{
+padding:80px 20px;
+text-align:center;
+}
 
-/* Price */
-.price-box{
-background:#1a1a2e;
-padding:20px;
-border-radius:10px;
-margin:20px auto;
-width:80%;
+/* BUY SECTION */
+.buy-box{
+background:#111;
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 25px #00f7ff33;
 }
 
 .price{
-font-size:25px;
+font-size:30px;
 color:#00f7ff;
+text-shadow:0 0 20px #00f7ff;
 }
 
-/* Input */
+/* ANIME BACKGROUND (BOTTOM) */
+.anime{
+background:url('https://images.unsplash.com/photo-1535223289827-42f1e9919769');
+background-size:cover;
+background-position:center;
+padding:100px 20px;
+}
+
+/* CONTACT */
 input,textarea{
-width:80%;
+width:90%;
 padding:10px;
 margin:10px;
 border:none;
-border-radius:5px;
+border-radius:10px;
 }
 
-/* WhatsApp */
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -109,33 +124,20 @@ right:20px;
 background:#25D366;
 padding:15px;
 border-radius:50%;
-color:white;
+text-decoration:none;
+color:light blue;
 font-size:20px;
-text-decoration:none;
 }
 
-/* UPI Button */
-.upi{
-background:#00f7ff;
-color:black;
-padding:12px;
-border-radius:20px;
-display:inline-block;
-margin-top:10px;
-text-decoration:none;
-}
-
-footer{background:black;padding:15px}
 </style>
 </head>
 
 <body>
 
 <nav>
-<h3>Sachin</h3>
+<h2>Sachin</h2>
 <div>
 <a href="#">Home</a>
-<a href="#services">Services</a>
 <a href="#buy">Buy</a>
 <a href="#contact">Contact</a>
 </div>
@@ -150,72 +152,48 @@ footer{background:black;padding:15px}
 </div>
 </div>
 
-<!-- SERVICES -->
-<section id="services">
-<h2>My Services</h2>
-<p>✔ Portfolio Website</p>
-<p>✔ Business Website</p>
-<p>✔ Landing Page</p>
-<p>✔ WhatsApp Integration</p>
-</section>
-
 <!-- BUY -->
 <section id="buy">
-<h2>Buy Website</h2>
+<h2 style="text-shadow:0 0 15px #00f7ff;">Buy Website</h2>
 
-<div class="price-box">
+<div class="buy-box">
 <p>Professional Website</p>
-<p class="price">₹3500 - ₹6000</p>
-<p>Fast delivery + Premium Design</p>
+<div class="price">₹3500 - ₹6000</div>
+<p>Fast Delivery + Premium Design</p>
 </div>
-
-<button class="btn" onclick="order()">Order on WhatsApp</button>
 
 <br>
 
-<!-- 💰 UPI PAYMENT -->
-<a class="upi" href="upi://pay?pa=7991901145@pthdfc&pn=Sachin&cu=INR">
-Pay via UPI 💰
+<a class="btn" href="https://wa.me/917991901145?text=I%20want%20a%20website">Order on WhatsApp</a>
+
+<br><br>
+
+<!-- UPI PAYMENT -->
+<a class="btn" href="upi://pay?pa=7991901145@pthdfc&pn=Sachin&am=3500&cu=INR">
+Pay ₹3500 via UPI
 </a>
 
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-<h2>Contact Me</h2>
+<!-- ANIME STYLE SECTION -->
+<section class="anime">
+<h2 style="text-shadow:0 0 20px #00f7ff;">Contact Me</h2>
 
-<input type="text" id="name" placeholder="Your Name"><br>
-<input type="text" id="work" placeholder="Website Type"><br>
-<textarea id="msg" placeholder="Your Message"></textarea><br>
+<input type="text" placeholder="Your Name">
+<input type="text" placeholder="Website Type">
+<textarea placeholder="Your Message"></textarea>
 
-<button class="btn" onclick="sendMsg()">Send</button>
+<br>
+<button class="btn">Send</button>
 
 </section>
 
-<footer>
-<p>© 2026 Sachin Web Services</p>
-</footer>
-
+<!-- WHATSAPP FLOAT -->
 <a class="whatsapp" href="https://wa.me/917991901145">💬</a>
 
 <script>
 function go(id){
 document.getElementById(id).scrollIntoView({behavior:'smooth'});
-}
-
-/* Auto Order */
-function order(){
-window.open("https://wa.me/917991901145?text=Hello%20I%20want%20a%20website%20(₹3500-6000)");
-}
-
-/* Contact form auto WhatsApp */
-function sendMsg(){
-let name=document.getElementById("name").value;
-let work=document.getElementById("work").value;
-let msg=document.getElementById("msg").value;
-
-let text=`Hello, Name: ${name}, Work: ${work}, Message: ${msg}`;
-window.open(`https://wa.me/917991901145?text=${encodeURIComponent(text)}`);
 }
 </script>
 
