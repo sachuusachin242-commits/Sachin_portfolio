@@ -47,7 +47,7 @@ text-decoration:none;
 text-shadow:0 0 10px #00f7ff;
 }
 
-/* HERO (PREMIUM WHITE + GLOW) */
+/* HERO (FIXED CLEAN BACKGROUND) */
 .hero{
 height:100vh;
 display:flex;
@@ -55,8 +55,8 @@ justify-content:center;
 align-items:center;
 text-align:center;
 background:
-linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.6)),
-url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)),
+url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
 background-size:cover;
 background-position:center;
 }
@@ -113,7 +113,7 @@ color:#00f7ff;
 text-shadow:0 0 20px #00f7ff, 0 0 40px #00f7ff;
 }
 
-/* ⚡ ZENITSU STYLE ANIME BACKGROUND */
+/* ANIME */
 .anime{
 background:
 linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
@@ -124,7 +124,6 @@ padding:100px 20px;
 position:relative;
 }
 
-/* ⚡ LIGHTNING EFFECT */
 .anime::before{
 content:"";
 position:absolute;
@@ -134,7 +133,6 @@ width:100%;
 height:100%;
 background:radial-gradient(circle, rgba(255,255,0,0.15), transparent);
 animation:lightning 2s infinite;
-pointer-events:none;
 }
 
 @keyframes lightning{
@@ -143,7 +141,7 @@ pointer-events:none;
 100%{opacity:0.2;}
 }
 
-/* CONTACT INPUT */
+/* INPUT */
 input,textarea{
 width:90%;
 padding:12px;
@@ -184,16 +182,14 @@ box-shadow:0 0 15px #25D366;
 </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
 <div>
-<h1>I Build Websites 💻🔥</h1>
+<h1>Build Websites for You 💻🔥</h1>
 <p>Get your business online fast 🚀</p>
 <button class="btn" onclick="go('buy')">Order Now</button>
 </div>
 </div>
 
-<!-- BUY -->
 <section id="buy">
 <h2 style="text-shadow:0 0 15px #00f7ff;">Buy Website</h2>
 
@@ -215,7 +211,6 @@ Pay ₹6500 via UPI
 
 </section>
 
-<!-- CONTACT -->
 <section class="anime" id="contact">
 <h2 style="text-shadow:0 0 20px #00f7ff;">Contact Me</h2>
 
