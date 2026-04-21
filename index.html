@@ -18,10 +18,10 @@ scroll-behavior:smooth;
 
 body{
 color:white;
-background:#ffffff;
+background:#0a0a0a;
 }
 
-/* NAVBAR (WHITE GLASS) */
+/* NAVBAR */
 nav{
 position:fixed;
 top:0;
@@ -29,8 +29,8 @@ width:100%;
 display:flex;
 justify-content:space-between;
 padding:15px 20px;
-background:rgba(255,255,255,0.2);
-backdrop-filter:blur(15px);
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
 z-index:1000;
 }
 
@@ -41,14 +41,13 @@ text-shadow:0 0 15px #00f7ff;
 }
 
 nav a{
-color:black;
+color:white;
 margin-left:15px;
 text-decoration:none;
-text-shadow:0 0 8px #00f7ff;
-font-weight:bold;
+text-shadow:0 0 10px #00f7ff;
 }
 
-/* HERO (WHITE AESTHETIC BG) */
+/* HERO (WHITE LAPTOP STYLE) */
 .hero{
 height:100vh;
 display:flex;
@@ -56,22 +55,20 @@ justify-content:center;
 align-items:center;
 text-align:center;
 background:
-linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.9)),
+linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)),
 url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
 background-size:cover;
 background-position:center;
 }
 
 .hero h1{
-font-size:42px;
+font-size:40px;
 font-style:italic;
-color:black;
-text-shadow:0 0 15px #00f7ff;
+text-shadow:0 0 20px #00f7ff;
 }
 
 .hero p{
 margin-top:10px;
-color:black;
 text-shadow:0 0 10px #00f7ff;
 }
 
@@ -85,13 +82,7 @@ color:black;
 cursor:pointer;
 margin-top:15px;
 font-weight:bold;
-box-shadow:0 0 25px #00f7ff;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:scale(1.05);
-box-shadow:0 0 40px #00f7ff;
+box-shadow:0 0 20px #00f7ff;
 }
 
 /* SECTION */
@@ -100,28 +91,28 @@ padding:80px 20px;
 text-align:center;
 }
 
-/* BUY */
+/* BUY SECTION */
 .buy-box{
 background:#111;
 padding:30px;
 border-radius:15px;
-box-shadow:0 0 30px #00f7ff55;
+box-shadow:0 0 25px #00f7ff33;
 }
 
 .price{
-font-size:32px;
+font-size:30px;
 color:#00f7ff;
-text-shadow:0 0 25px #00f7ff;
+text-shadow:0 0 20px #00f7ff;
 }
 
-/* 🔥 REAL ZENITSU BACKGROUND */
+/* CONTACT (COLORFUL DARK BG) */
 .anime{
 background:
-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),
-url('https://w0.peakpx.com/wallpaper/1000/104/HD-wallpaper-zenitsu-agatsuma-demon-slayer-anime.jpg');
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1511512578047-dfb367046420');
 background-size:cover;
 background-position:center;
-padding:120px 20px;
+padding:100px 20px;
 }
 
 /* CONTACT INPUT */
@@ -148,7 +139,6 @@ border-radius:50%;
 text-decoration:none;
 color:white;
 font-size:20px;
-box-shadow:0 0 15px #25D366;
 }
 
 </style>
@@ -176,7 +166,7 @@ box-shadow:0 0 15px #25D366;
 
 <!-- BUY -->
 <section id="buy">
-<h2 style="color:black;text-shadow:0 0 15px #00f7ff;">Buy Website</h2>
+<h2 style="text-shadow:0 0 15px #00f7ff;">Buy Website</h2>
 
 <div class="buy-box">
 <p>Professional Website</p>
@@ -196,9 +186,9 @@ Pay ₹6500 via UPI
 
 </section>
 
-<!-- ANIME SECTION -->
+<!-- CONTACT -->
 <section class="anime" id="contact">
-<h2 style="text-shadow:0 0 30px #00f7ff;">Contact Me</h2>
+<h2 style="text-shadow:0 0 20px #00f7ff;">Contact Me</h2>
 
 <input type="text" placeholder="Your Name">
 <input type="text" placeholder="Website Type">
