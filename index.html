@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sachin Web Services</title>
 
-<!-- 🔥 STYLISH FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
@@ -19,10 +18,10 @@ scroll-behavior:smooth;
 
 body{
 color:white;
-background:#0a0a0a;
+background:#ffffff;
 }
 
-/* NAVBAR */
+/* NAVBAR (WHITE GLASS) */
 nav{
 position:fixed;
 top:0;
@@ -30,8 +29,8 @@ width:100%;
 display:flex;
 justify-content:space-between;
 padding:15px 20px;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(15px);
 z-index:1000;
 }
 
@@ -42,13 +41,14 @@ text-shadow:0 0 15px #00f7ff;
 }
 
 nav a{
-color:white;
+color:black;
 margin-left:15px;
 text-decoration:none;
-text-shadow:0 0 10px #00f7ff;
+text-shadow:0 0 8px #00f7ff;
+font-weight:bold;
 }
 
-/* HERO */
+/* HERO (WHITE AESTHETIC BG) */
 .hero{
 height:100vh;
 display:flex;
@@ -56,20 +56,22 @@ justify-content:center;
 align-items:center;
 text-align:center;
 background:
-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.9)),
+url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
 background-size:cover;
 background-position:center;
 }
 
 .hero h1{
-font-size:40px;
+font-size:42px;
 font-style:italic;
-text-shadow:0 0 20px #00f7ff;
+color:black;
+text-shadow:0 0 15px #00f7ff;
 }
 
 .hero p{
 margin-top:10px;
+color:black;
 text-shadow:0 0 10px #00f7ff;
 }
 
@@ -83,7 +85,13 @@ color:black;
 cursor:pointer;
 margin-top:15px;
 font-weight:bold;
-box-shadow:0 0 20px #00f7ff;
+box-shadow:0 0 25px #00f7ff;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 40px #00f7ff;
 }
 
 /* SECTION */
@@ -92,31 +100,31 @@ padding:80px 20px;
 text-align:center;
 }
 
-/* BUY SECTION */
+/* BUY */
 .buy-box{
 background:#111;
 padding:30px;
 border-radius:15px;
-box-shadow:0 0 25px #00f7ff33;
+box-shadow:0 0 30px #00f7ff55;
 }
 
 .price{
-font-size:30px;
+font-size:32px;
 color:#00f7ff;
-text-shadow:0 0 20px #00f7ff;
+text-shadow:0 0 25px #00f7ff;
 }
 
-/* 🔥 ZENITSU ANIME BACKGROUND */
+/* 🔥 REAL ZENITSU BACKGROUND */
 .anime{
 background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
-url('https://wallpaperaccess.com/full/6105834.jpg');
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),
+url('https://w0.peakpx.com/wallpaper/1000/104/HD-wallpaper-zenitsu-agatsuma-demon-slayer-anime.jpg');
 background-size:cover;
 background-position:center;
-padding:100px 20px;
+padding:120px 20px;
 }
 
-/* CONTACT */
+/* CONTACT INPUT */
 input,textarea{
 width:90%;
 padding:12px;
@@ -140,6 +148,7 @@ border-radius:50%;
 text-decoration:none;
 color:white;
 font-size:20px;
+box-shadow:0 0 15px #25D366;
 }
 
 </style>
@@ -167,7 +176,7 @@ font-size:20px;
 
 <!-- BUY -->
 <section id="buy">
-<h2 style="text-shadow:0 0 15px #00f7ff;">Buy Website</h2>
+<h2 style="color:black;text-shadow:0 0 15px #00f7ff;">Buy Website</h2>
 
 <div class="buy-box">
 <p>Professional Website</p>
@@ -189,7 +198,7 @@ Pay ₹6500 via UPI
 
 <!-- ANIME SECTION -->
 <section class="anime" id="contact">
-<h2 style="text-shadow:0 0 20px #00f7ff;">Contact Me</h2>
+<h2 style="text-shadow:0 0 30px #00f7ff;">Contact Me</h2>
 
 <input type="text" placeholder="Your Name">
 <input type="text" placeholder="Website Type">
@@ -200,7 +209,6 @@ Pay ₹6500 via UPI
 
 </section>
 
-<!-- WHATSAPP FLOAT -->
 <a class="whatsapp" href="https://wa.me/917991901145">💬</a>
 
 <script>
